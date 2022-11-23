@@ -9,8 +9,13 @@
 
 #header {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+#header h1 {
+    font-size: 40px;
 }
 
 #gameboard {
@@ -28,10 +33,10 @@
     width: 150px;
 }
 
-#block1, #block4,#block7 {
+#block-1, #block-4,#block-7 {
     border-right: 1px solid black;
 }
-#block2, #block5,#block8 {
+#block-2, #block-5,#block-8 {
     border-right: 1px solid black;
 }
 #row2 div, #row3 div {
