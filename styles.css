@@ -1,0 +1,44 @@
+
+
+#overallContainer {
+    min-height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#gameboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gameRows {
+    display: flex;
+}
+
+.gameBlocks {
+    height: 150px;
+    width: 150px;
+}
+
+#block1, #block4,#block7 {
+    border-right: 1px solid black;
+}
+#block2, #block5,#block8 {
+    border-right: 1px solid black;
+}
+#row2 div, #row3 div {
+    border-top: 1px solid black;
+}
+
+.gameBlocks:hover {
+    background-color: grey;
+}
+
