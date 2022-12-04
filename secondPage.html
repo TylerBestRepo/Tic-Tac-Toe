@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="title">
+        <h1>Tic Tac Toe</h1>
+    </div>
+    <div id="overallContainer">
+        <div id="header">
+            <div class="empty"></div>
+            <h4 id="vsInfo"></h2>
+            <div class="playerListings">
+                <div id="instructions">Player 1 goes First</div>
+                <div id="blueColour">Blue = Player 1</div>
+                <div id="redColour">Red = Player 2</div>
+            </div>
+            
+        </div>
+
+        <div id="gameboard">
+            <div id="row1" class="gameRows">
+                <div id="block-1" class="gameBlocks hoverClass"></div>
+                <div id="block-2" class="gameBlocks hoverClass"></div>
+                <div id="block-3" class="gameBlocks hoverClass"></div>
+            </div>
+            <div id="row2" class="gameRows">
+                <div id="block-4" class="gameBlocks hoverClass"></div>
+                <div id="block-5" class="gameBlocks hoverClass"></div>
+                <div id="block-6" class="gameBlocks hoverClass"></div>
+            </div>
+            <div id="row3" class="gameRows">
+                <div id="block-7" class="gameBlocks hoverClass"></div>
+                <div id="block-8" class="gameBlocks hoverClass"></div>
+                <div id="block-9" class="gameBlocks hoverClass"></div>
+            </div>
+        </div>
+        
+
+        <div id="winnerSection">
+            <h1 id="winnerText"></h1>
+        </div>
+    </div>
+    
+
+    <script src="gameLogic.js"></script>
+</body>
+</html>

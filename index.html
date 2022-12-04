@@ -4,46 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tic Tac Toe</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Index</title>
+    <link rel="stylesheet" href="indexStyles.css">
 </head>
 <body>
-    <a href="/">Back to front page</a>
-    <div id="results"></div>
-    <div id="overallContainer">
-        <div id="header">
-            <h1>Tic Tac Toe</h1>
-            <h2 id="vsInfo"></h2>
-            <div id="instructions">Player 1 goes First</div>
-            <div id="blueColour">Blue = Player 1</div>
-            <div id="redColour">Red = Player 2</div>
+    <button class="playBtn" data-modal-target="#modal">Play Tic Tac Toe</button>
+    <div id="modal" class="modal active">
+        <div class="modal-header">
+            <div class="title">Welcome to Tic Tac Toe</div>
+            <button data-close-button class="close-button">&times;</button>
         </div>
+            <form class="form-class" action="secondPage.html" method="GET">
+                <div>
+                    <label for="player1">Player 1:</label>
+                    <input type="text" name="player1" id="player1" placeholder="e.g Tony" required>    
+                </div>
+                <div>
+                    <label for="player2">Player 2:</label>
+                    <input type="text" name="player2" id="player2" value="Computer" required>    
+                </div>
+                <div class="buttons">
+                    <button id="reset" type="reset">Reset</button>
+                    <button id="submit" type="submit">Submit</button>
+                </div>
 
-        <div id="gameboard">
-            <div id="row1" class="gameRows">
-                <div id="block-1" class="gameBlocks hoverClass"></div>
-                <div id="block-2" class="gameBlocks hoverClass"></div>
-                <div id="block-3" class="gameBlocks hoverClass"></div>
-            </div>
-            <div id="row2" class="gameRows">
-                <div id="block-4" class="gameBlocks hoverClass"></div>
-                <div id="block-5" class="gameBlocks hoverClass"></div>
-                <div id="block-6" class="gameBlocks hoverClass"></div>
-            </div>
-            <div id="row3" class="gameRows">
-                <div id="block-7" class="gameBlocks hoverClass"></div>
-                <div id="block-8" class="gameBlocks hoverClass"></div>
-                <div id="block-9" class="gameBlocks hoverClass"></div>
-            </div>
-        </div>
-        
-
-        <div id="winnerSection">
-            <h1 id="winnerText"></h1>
-        </div>
+            </form>
     </div>
+    <div id="overlay" class="active"></div>
     
-
-    <script src="gameLogic.js"></script>
+    <script src="frontPageLogic.js"></script>
 </body>
 </html>

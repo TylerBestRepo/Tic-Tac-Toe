@@ -1,20 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
+* {
+    background-color: black;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+.title  {
+    display: flex;
+    justify-content: center;
+
+}
+
+.title h1 {
+    font-size: 58px;
+    margin: 19px 0px;
+}
 
 #overallContainer {
-    min-height: 700px;
+    min-height: 680px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-#header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.empty {
+    width: 180px;
 }
 
-#header h1 {
+#header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 400px;
+}
+
+.playerListings {
+    width: 200px;
+    align-items: end;
+}
+.playerListings #instructions {
+    font-weight: bold;
+}
+
+.playerListings #blueColour {
+    color: blue;
+}
+.playerListings #redColour {
+    color: red;
+}
+
+h1 {
     font-size: 40px;
 }
 
@@ -34,13 +72,13 @@
 }
 
 #block-1, #block-4,#block-7 {
-    border-right: 1px solid black;
+    border-right: 1px solid white;
 }
 #block-2, #block-5,#block-8 {
-    border-right: 1px solid black;
+    border-right: 1px solid white;
 }
 #row2 div, #row3 div {
-    border-top: 1px solid black;
+    border-top: 1px solid white;
 }
 
 .hoverClass:hover {
@@ -53,76 +91,49 @@
     align-items: center;
 }
 
-.modal {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%) scale(0);
-    transition: 200ms ease-in-out;
-    border: 1px solid black;
-    border-radius: 10px;
-    z-index: 10;
-    background-color: white;
-    width: 500px;
-    max-width: 80%;
+#winnerSection h1 {
+    margin-top: 8px;
 }
 
-.modal.active {
-    transform: translate(-50%,-50%) scale(1);
+@media (max-height: 1000px) {
+    .title h1 {
+        font-size: 40px;
+        font-weight: 900;
+        margin: 19px 0px;
+    }
+    #header {
+        height: 15%;
+    }
+
+    #header h4 {
+        font-size: 20px;
+    }
+    #playerListings div {
+        font-size: 16px;
+    }
 }
 
-.modal-header {
-    padding: 10px 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid black;
-}
 
-.modal-header .title {
-    font-size: 1.25rem;
-    font-weight: bold;
-}
 
-.modal-header .close-button {
-    cursor: pointer;
-    border: none;
-    outline: none;
-    background: none;
-    font-size: 1.25rem;
-    font-weight: bold;
-}
+@media (min-height: 1200px) and (min-width: 1200px){
+    .title h1 {
+        font-size: 78px;
+        font-weight: 900;
+        margin: 19px 0px;
+    }
+    #header {
+        height: 20%;
+        margin-bottom: 50px;
+    }
 
-.modal-body {
-    padding: 10px 15px;
-    
-}
-.form-class {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-}
-
-#overlay {
-    opacity: 0;
-    transition: 200ms ease-in-out;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, .5);
-    pointer-events: none;
-}
-
-#overlay.active {
-    opacity: 1;
-    pointer-events: all;
-}
-
-.playBtn {
-    position: fixed;
-    top: 50%;
-    left: 50%;
+    #header h4 {
+        font-size: 20px;
+    }
+    #playerListings div {
+        font-size: 16px;
+    }
+    .gameBlocks {
+        height: 250px;
+        width: 250px;
+    }
 }
